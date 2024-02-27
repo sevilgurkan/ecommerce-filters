@@ -1,0 +1,21 @@
+{
+  "name": "commerce-monorepo",
+  "version": "1.0.0",
+  "author": "Gürkan Sevil",
+  "private": true,
+  "description": "Commerce app monorepo",
+  "main": "index.js",
+  "license": "ISC",
+  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "workspaces": [
+    "packages/client",
+    "packages/server",
+    "packages/common"
+  ]
+}
