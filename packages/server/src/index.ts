@@ -2,7 +2,9 @@ import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 import qs from 'query-string'
+
 import { seed } from './seed'
+import { setupRoutes } from './setup-routes'
 
 const PORT = process.env.PORT || 8080
 
@@ -10,6 +12,8 @@ async function startServer() {
   seed({ recreateOnEveryRefresh: false })
 
   const app = setupExpressApp()
+
+  setupRoutes(app)
 
   app.listen(PORT, () => {
     console.log(`
