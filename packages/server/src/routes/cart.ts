@@ -73,7 +73,6 @@ export function cartRoutes(app: Express) {
   })
 
   app.put('/cart', async (req, res) => {
-    console.log('PUT CART')
     const { productId, quantity } = req.body
 
     try {

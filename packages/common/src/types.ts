@@ -8,6 +8,7 @@ export enum SSTTypes {
   BEST_SELLER = 'BEST_SELLER',
   MOST_FAVOURITE = 'MOST_FAVOURITE',
   MOST_RATED = 'MOST_RATED',
+  RECOMMENDED = 'RECOMMENDED',
 }
 
 export type SSTKeys = keyof typeof SSTTypes
@@ -19,6 +20,7 @@ export const sstKeys: SSTKeys[] = [
   'BEST_SELLER',
   'MOST_FAVOURITE',
   'MOST_RATED',
+  'RECOMMENDED',
 ]
 
 export enum ProductBadgeTypes {

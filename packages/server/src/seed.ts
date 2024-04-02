@@ -119,6 +119,8 @@ function createProduct(id: number, brand: Brand, category: Category) {
   })
 
   const badges = []
+  const MIN_PRICE = 50
+  const MAX_PRICE = 50_000
 
   const name = faker.commerce.productDescription()
 
@@ -145,7 +147,7 @@ function createProduct(id: number, brand: Brand, category: Category) {
   })
 
   const originalPrice = parseFloat(
-    faker.commerce.price({ min: 50, max: 50_000, dec: 2 })
+    faker.commerce.price({ min: MIN_PRICE, max: MAX_PRICE, dec: 2 })
   )
 
   let discountedPrice = originalPrice
@@ -159,7 +161,7 @@ function createProduct(id: number, brand: Brand, category: Category) {
     id,
     brand: {
       id: brand.id,
-      name: brand.name,
+      name: brand.text,
     },
     category: {
       id: category.id,
@@ -244,6 +246,7 @@ function createCategories(): Category[] {
 
 function createSearchSortings() {
   return [
+    { key: SSTTypes.RECOMMENDED, text: 'Önerilen sıralama' },
     { key: SSTTypes.PRICE_BY_ASC, text: 'En düşük fiyat' },
     { key: SSTTypes.PRICE_BY_DESC, text: 'En yüksek fiyat' },
     { key: SSTTypes.MOST_RECENT, text: 'En yeniler' },
