@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Layout from '@/components/Layout/Layout'
 import { AppProviders } from '@/components/Providers'
+import { cn } from '@/lib/utils'
 
 import './globals.css'
 
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cn(inter.className, 'overflow-hidden')}>
         <AppProviders>
           <Layout>{children}</Layout>
         </AppProviders>

@@ -53,6 +53,12 @@ export function RangeContent({ filterValues }: FilterContentProps) {
     onFilter({ key: 'price', value: `${minParam}-${maxParam}` })
   }
 
+  const handleLinkClick = (filterId: string) => {
+    const [min, max] = filterId.split('-')
+    setMinInput(min)
+    setMaxInput(max)
+  }
+
   return (
     <>
       <div className="flex ">
@@ -86,6 +92,7 @@ export function RangeContent({ filterValues }: FilterContentProps) {
             href={`?${filter.url}`}
             key={filter.id}
             className="flex items-center space-x-2"
+            onClick={() => handleLinkClick(filter.id)}
           >
             <div
               className={cn(

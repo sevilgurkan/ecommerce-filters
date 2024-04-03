@@ -68,8 +68,7 @@ export function sstHandler(products: Product[], query: FilterQueryStructure) {
     case 'MOST_RATED':
       handler = mostRated
       break
-    // @ts-ignore
-    case 'RECOMMENDED': // sample case for a real application
+    case 'RECOMMENDED':
     default:
       handler = defaultSST
   }
@@ -79,6 +78,7 @@ export function sstHandler(products: Product[], query: FilterQueryStructure) {
   function defaultSST(products: Product[]) {
     // In a real application,
     // the "recommended products" algorithm might be here.
+
     return products
   }
 

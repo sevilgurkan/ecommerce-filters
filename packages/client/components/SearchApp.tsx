@@ -31,7 +31,7 @@ export function SearchApp() {
     getNextPageParam: lastPage => lastPage.cursor ?? undefined,
     placeholderData: keepPreviousData,
     staleTime: 0,
-    retry: true,
+    retry: false,
   })
 
   const isFilterFetch =

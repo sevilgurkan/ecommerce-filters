@@ -109,7 +109,11 @@ function createProducts(brands: Brand[], categories: Category[]) {
     }
   }
 
-  return { products, brandProducts, categoryProducts }
+  return {
+    products: shuffleProducts(products),
+    brandProducts,
+    categoryProducts,
+  }
 }
 
 function createProduct(id: number, brand: Brand, category: Category) {
@@ -314,6 +318,18 @@ function getRandomIntMaxExclusive(min: number, max: number) {
   const minCeiled = Math.ceil(min)
   const maxFloored = Math.floor(max)
   return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)
+}
+
+function shuffleProducts(prods: Product[]): Product[] {
+  let currIndex = prods.length
+
+  while (currIndex !== 0) {
+    const rndIndex = Math.floor(Math.random() * currIndex)
+    currIndex -= 1
+    ;[prods[currIndex], prods[rndIndex]] = [prods[rndIndex], prods[currIndex]]
+  }
+
+  return prods
 }
 
 const productBadge = {

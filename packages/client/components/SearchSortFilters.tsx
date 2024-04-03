@@ -19,7 +19,6 @@ export function SearchSortFilters() {
 
   function handleSSTChange(text: string, sstKey: SSTKeys) {
     setCurrentSST(text)
-
     onFilter({ key: 'sst', value: sstKey })
   }
 

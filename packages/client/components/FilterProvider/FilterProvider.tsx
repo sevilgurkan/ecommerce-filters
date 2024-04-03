@@ -39,8 +39,6 @@ export function FilterProvider({ children, filters }: FilterProviderProps) {
 
   const handleFilter = useCallback(
     ({ key, value, full }: HandleFilter) => {
-      if (!value) return
-
       if (full) {
         router.replace(`${pathname}?${value}`)
         return

@@ -31,29 +31,31 @@ function CartProducts({ cart }: { cart: ShoppingCart }) {
   return (
     <div>
       <div className="text-xl font-semibold">{`Sepetim (${count} Ürün)`}</div>
-      <div className="mt-4">
-        <div className="border rounded-lg [&>*:not(:last-of-type)]:border-b">
-          {items.map((item, index) => (
-            <div key={item.id} className="flex items-center px-8 py-8">
-              <div className="border rounded-md overflow-hidden relative h-[100px] w-[70px] mr-4">
-                <ProductImage
-                  src={item.imageUrl}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  alt="No product image"
-                />
-              </div>
-              <div className="block w-[380px] mr-4">
-                <p className="truncate font-semibold">{item.brand.name}</p>
-                <p className="truncate">{item.name}</p>
-              </div>
+      {count > 0 ? (
+        <div className="mt-4">
+          <div className="border rounded-lg [&>*:not(:last-of-type)]:border-b">
+            {items.map(item => (
+              <div key={item.id} className="flex items-center px-8 py-8">
+                <div className="border rounded-md overflow-hidden relative h-[100px] w-[70px] mr-4">
+                  <ProductImage
+                    src={item.imageUrl}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    alt="No product image"
+                  />
+                </div>
+                <div className="block w-[380px] mr-4">
+                  <p className="truncate font-semibold">{item.brand.name}</p>
+                  <p className="truncate">{item.name}</p>
+                </div>
 
-              {/* Actions */}
-              <CartActions item={item} />
-            </div>
-          ))}
+                {/* Actions */}
+                <CartActions item={item} />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      ) : null}
     </div>
   )
 }

@@ -15,7 +15,7 @@ export async function getProducts(query: string, cursor: number) {
 
   // added some delay for infinite scrolling demo
   return new Promise<{ data: Product[]; cursor: number | null }>(resolve => {
-    setTimeout(resolve, 600, result.payload)
+    setTimeout(resolve, 300, result.payload)
   })
 }
 
