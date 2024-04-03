@@ -6,8 +6,8 @@ In this project, filters are entirely controlled by the server. The server gener
 
 All filters are written into the URL query. Every time a filter is selected or changed, two requests are sent to the server - one for filters and the other for products. In both requests, the URL query is sent to the server. The server parses, transforms, and processes this query.
 
-`GET /filters` The server generates queries for the new filters, changes the active state of the filters based on the IDs in the query, and sends the generated filters to the client.</br>
-`GET /products` The server sends the products that match the filters in the query to the client.
+`GET /filters` Server generates queries for the new filters, changes the active state of the filters based on the IDs in the query, and sends the generated filters to the client.</br>
+`GET /products` Server sends the products that match the filters in the query to the client.
 
 ## Data
 
@@ -28,13 +28,13 @@ If you set this to `true`, it will regenerate all data on every save operation. 
 ## Features
 
 - Fetch Data from API
-- URL-Based Filtering: Filters can be added or changed through the URL. e.g. "?gender=1&rd=true&fc=true&sst=BESTSELLER".
+- URL-Based Filtering: Filters can be added or changed through the URL. <br />e.g. "?gender=1&rd=true&fc=true&sst=BESTSELLER".
 - Product Filtering: Products can be filtered by brand, price, gender, and more.
 - Product Sorting: Sort products by price, recentness, best-seller status, etc.
 - Quick Filters: Easily access commonly used filters for quick selection.
 - Add to Basket
 - Basket Page: View, manage, and remove items from your shopping basket.
-- Infinite Scroll: Seamlessly scroll through the product list, with more products loading as you scroll down.
+- Infinite Scroll: More products are loaded as you scroll down.
 
 ## Used
 
