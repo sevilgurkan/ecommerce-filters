@@ -1,0 +1,26 @@
+[
+  {
+    "key": "fc",
+    "id": "true",
+    "filterField": "freeCargo",
+    "text": "Kargo Bedava"
+  },
+  {
+    "key": "rd",
+    "id": "true",
+    "filterField": "rushDelivery",
+    "text": "Hızlı Teslimat"
+  },
+  {
+    "key": "sds",
+    "id": "true",
+    "filterField": "sameDayShipping",
+    "text": "Bugün Kargoda"
+  },
+  {
+    "key": "pr",
+    "id": "true",
+    "filterField": "productRate",
+    "text": "Yüksek Puanlı Ürünler"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "key": "RECOMMENDED",
+    "text": "Önerilen sıralama"
+  },
+  {
+    "key": "PRICE_BY_ASC",
+    "text": "En düşük fiyat"
+  },
+  {
+    "key": "PRICE_BY_DESC",
+    "text": "En yüksek fiyat"
+  },
+  {
+    "key": "MOST_RECENT",
+    "text": "En yeniler"
+  },
+  {
+    "key": "BEST_SELLER",
+    "text": "En çok satanlar"
+  },
+  {
+    "key": "MOST_FAVOURITE",
+    "text": "En çok beğenilenler"
+  },
+  {
+    "key": "MOST_RATED",
+    "text": "En çok değerlendirilenler"
+  }
+]

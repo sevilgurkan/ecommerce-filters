@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Kadın",
+    "type": "gender"
+  },
+  {
+    "id": 2,
+    "name": "Erkek",
+    "type": "gender"
+  },
+  {
+    "id": 425293,
+    "name": "Kozmetik",
+    "type": "cosmetic"
+  },
+  {
+    "id": 288309,
+    "name": "Elektronik",
+    "type": "electronic"
+  },
+  {
+    "id": 169826,
+    "name": "Spor",
+    "type": "spor"
+  }
+]
