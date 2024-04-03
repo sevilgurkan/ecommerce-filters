@@ -25,6 +25,8 @@ If you set this to `true`, it will regenerate all data on every save operation. 
 
 ## Demo
 
+https://github.com/sevilgurkan/ecommerce-filters/assets/48570819/e800b1c9-b225-4c6a-9a79-b7f1d4fb018f
+
 ## Features
 
 - Fetch Data from API
